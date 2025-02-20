@@ -34,8 +34,8 @@ def is_file(filepath):
   import os
   try:
     if os.path.exists(filepath):
-      print('ja tem')
-      return False
+      print('ja tem salt!')
+      return True
     return False
   except Exception as e:
     print(f"An error occurred: {e}")
@@ -45,7 +45,7 @@ def mysalt():
   import json
   file = None
   if(not is_file("salt.json")):
-    file = open('salt.json', 'w')
+    file = open('salt.json', 'x')
     salt_json = { "salt": generate_random_hex() }
     salt_json = json.dumps(salt_json)
     file.write(salt_json)

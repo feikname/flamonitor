@@ -1,0 +1,7 @@
+Include/
+Lib/
+Scripts/
+pyenv.cfg
+__pycache__
+pyvenv.cfg
+computers.json
